@@ -1,0 +1,383 @@
+.hero-section {
+  padding: 180px 0 120px 0;
+  text-align: center;
+  background-color: transparent;
+  overflow-x: clip;
+  position: relative;
+}
+
+/* Spinning text decoration — pinned to the right edge */
+.hero-spinning-text {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  z-index: 20;
+}
+
+.hero-badges {
+  margin-bottom: 24px;
+}
+
+.badge {
+  background-color: var(--color-muted-bg);
+  color: var(--color-brand-dark);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--color-brand-light);
+}
+
+.hero-title {
+  font-family: var(--font-main);
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 1.08;
+  color: var(--color-foreground);
+  margin-bottom: 32px;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: 1.45rem;
+  color: var(--color-muted);
+  margin-bottom: 48px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+.hero-form {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+.hero-input-wrapper {
+  position: relative;
+  display: flex;
+  border-radius: 999px;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 20px 40px -10px rgba(0, 123, 165, 0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.hero-input-wrapper:focus-within {
+  transform: scale(1.02);
+}
+
+.hero-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 20px 28px;
+  font-size: 1.2rem;
+  outline: none;
+  font-family: inherit;
+  color: var(--color-foreground);
+  border-radius: 999px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-submit-btn {
+  background-color: var(--color-brand);
+  color: white;
+  border: none;
+  padding: 0 40px;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: none;
+  transition: background-color 0.2s, transform 0.1s;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-submit-btn:hover {
+  background-color: var(--color-brand-dark);
+}
+
+.hero-submit-btn:active {
+  transform: scale(0.95);
+}
+
+.hero-social-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 80px;
+}
+
+.hero-social-text {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+/* Mockup Layout */
+.hero-mockup-area {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Enormous Radial Gradient Background behind Phone */
+.hero-mockup-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 1300px;
+  background: radial-gradient(circle, rgba(0,123,165,0.35) 0%, rgba(77,193,245,0.18) 35%, rgba(200,235,248,0.08) 60%, rgba(255,255,255,0) 72%);
+  z-index: 10; /* Changed z-index so it sits right behind the widgets */
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mockup-main {
+  position: relative;
+  z-index: 20;
+}
+
+/* Positioning the 4 floating widgets */
+/* They need absolute positioning via the wrapper */
+.hero-mockup-area :global(.floating-widget-wrapper) {
+  position: absolute;
+  z-index: 30; /* Front of glow */
+}
+
+.fw-pos-1 {
+  top: 80px;
+  left: 0px;
+}
+
+.fw-pos-2 {
+  top: 150px;
+  right: 20px;
+}
+
+.fw-pos-3 {
+  bottom: 150px;
+  left: 40px;
+}
+
+.fw-pos-4 {
+  bottom: 80px;
+  right: -20px;
+}
+
+@media (max-width: 1200px) {
+  .fw-pos-1 { left: 50px; }
+  .fw-pos-2 { right: 50px; }
+  .fw-pos-3 { left: 80px; }
+  .fw-pos-4 { right: 50px; }
+}
+
+/* ── Mobile-only widget grid ────────────────────── */
+.hero-mobile-widgets {
+  display: none; /* hidden on desktop */
+}
+
+/* ── Mobile responsive ──────────────────────────── */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 20px 40px;
+  }
+
+  .hero-spinning-text {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .hero-form {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-input-wrapper {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hero-input {
+    padding: 16px 20px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    background: #f8fafc;
+  }
+
+  .hero-submit-btn {
+    padding: 16px 0;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .hero-mockup-area {
+    margin-top: 16px;
+  }
+
+  /* Hide absolute-positioned widgets on mobile */
+  .fw-pos-1, .fw-pos-2, .fw-pos-3, .fw-pos-4 {
+    display: none;
+  }
+
+  .hero-mockup-glow {
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero-social-proof {
+    margin-bottom: 24px;
+    gap: 10px;
+  }
+
+  .hero-social-text {
+    font-size: 0.92rem;
+  }
+
+  /* Show the mobile widget 2x2 grid */
+  .hero-mobile-widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 4px;
+  }
+
+  /* Each widget in mobile grid: full width, no rotation, compact */
+  .hero-mw-item {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+
+  /* Force FloatingWidget wrappers to fill the cell */
+  .hero-mw-item > div {
+    width: 100% !important;
+    transform: none !important;
+  }
+}
+
+/* ===================================================
+   Hero Staggered Load Animations (above-the-fold)
+   =================================================== */
+@keyframes heroRevealUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroRevealFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroRevealScale {
+  from { opacity: 0; transform: scale(0.9) translateY(24px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes heroRevealLeft {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroRevealRight {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Text-area stagger */
+.hero-anim-title  { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.10s both; }
+.hero-anim-sub    { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.26s both; }
+.hero-anim-form   { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+.hero-anim-proof  { animation: heroRevealFade 0.9s cubic-bezier(0.16,1,0.3,1) 0.58s both; }
+
+/* Phone mockup reveal */
+.hero-mockup-enter { animation: heroRevealScale 1.1s cubic-bezier(0.16,1,0.3,1) 0.35s both; }
+
+/* Floating widget entrances — animate the inner wrapper so rotation is preserved */
+.fw-pos-1 .floating-widget-animator { animation: heroRevealLeft  0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
+.fw-pos-2 .floating-widget-animator { animation: heroRevealRight 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
+.fw-pos-3 .floating-widget-animator { animation: heroRevealLeft  0.9s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
+.fw-pos-4 .floating-widget-animator { animation: heroRevealRight 0.9s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim-title, .hero-anim-sub, .hero-anim-form, .hero-anim-proof,
+  .hero-mockup-enter,
+  .fw-pos-1 .floating-widget-animator, .fw-pos-2 .floating-widget-animator,
+  .fw-pos-3 .floating-widget-animator, .fw-pos-4 .floating-widget-animator {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Form feedback messages ─────────────────────── */
+.hero-form-msg {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  animation: heroRevealUp 0.4s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+.hero-form-msg--success {
+  color: #0f766e;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.hero-form-msg--info {
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.hero-form-msg--error {
+  color: #be123c;
+  background-color: #fff1f2;
+  border: 1px solid #fecdd3;
+}

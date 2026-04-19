@@ -1,0 +1,214 @@
+.navbar-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 9999px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+  transition: border-radius 0.25s ease, box-shadow 0.3s ease;
+  width: auto;
+  min-width: min(850px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+}
+
+/* When mobile menu is open, square bottom corners */
+.navbar-container:has(.navbar-mobile-menu) {
+  border-radius: 24px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 12px 40px;
+  width: 100%;
+}
+
+/* ── Logo ─────────────────────────────────────────── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-text {
+  height: 48px;
+  width: auto;
+}
+
+/* ── Desktop nav links ────────────────────────────── */
+.navbar-links {
+  display: none;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (min-width: 769px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #111827;
+  background-color: #f8fafc;
+}
+
+.navbar-link:nth-child(2) {
+  background-color: #fafafa;
+  color: #111827;
+}
+
+/* ── Desktop CTA ──────────────────────────────────── */
+.navbar-actions--desktop {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .navbar-actions--desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navbar-btn {
+  background-color: #005C8A;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: none;
+  transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.navbar-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 92, 138, 0.25);
+}
+
+.navbar-btn:active {
+  transform: scale(0.95);
+}
+
+/* ── Hamburger button ─────────────────────────────── */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: none;
+  padding: 4px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.navbar-hamburger:hover {
+  background: #f1f5f9;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #1e293b;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+/* Animated X when open */
+.navbar-hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+}
+
+/* ── Mobile dropdown menu ─────────────────────────── */
+.navbar-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px 20px;
+  gap: 4px;
+  border-top: 1px solid #e2e8f0;
+  animation: mobileMenuIn 0.2s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+@keyframes mobileMenuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-mobile-link {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 14px 20px;
+  border-radius: 14px;
+  transition: background 0.15s;
+}
+
+.navbar-mobile-link:hover {
+  background: #f1f5f9;
+  color: #111827;
+}
+
+.navbar-mobile-cta {
+  margin-top: 8px;
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 16px;
+  font-size: 1rem;
+}
+
+/* ── Mobile sizing ────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar-container {
+    top: 12px;
+    border-radius: 20px;
+  }
+
+  .navbar-container:has(.navbar-mobile-menu) {
+    border-radius: 20px;
+  }
+
+  .navbar-content {
+    padding: 10px 12px 10px 20px;
+  }
+
+  .navbar-text {
+    height: 36px;
+  }
+}

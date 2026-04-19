@@ -1,0 +1,74 @@
+.velocity-banner-section {
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+.velocity-banner-inner {
+  position: relative;
+  width: 100%;
+}
+
+.velocity-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Each row wrapper */
+.scroll-velocity-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scroll-velocity-row-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll-velocity-row {
+  display: flex;
+  white-space: nowrap;
+  font-size: 7.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-foreground, #0f172a);
+  line-height: 1.05;
+  will-change: transform;
+  user-select: none;
+}
+
+.scroll-velocity-item {
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+/* Fade edges */
+.velocity-fade-left,
+.velocity-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 18%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.velocity-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+.velocity-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .scroll-velocity-row {
+    font-size: 4.5rem;
+  }
+}

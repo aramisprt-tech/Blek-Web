@@ -1,0 +1,183 @@
+.showcase-section {
+  padding: 80px 0 120px 0;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.showcase-header .badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  background-color: white;
+}
+
+.showcase-title {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-foreground);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.showcase-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-muted);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .showcase-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+/* Left side items */
+.showcase-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 20px;
+}
+
+.showcase-tab {
+  position: relative;
+  display: flex;
+  padding: 24px 0;
+  cursor: none;
+  transition: all 0.3s ease;
+}
+
+.tab-indicator {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  bottom: 24px;
+  width: 3px;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.showcase-tab.active .tab-indicator {
+  background-color: var(--color-brand);
+}
+
+.tab-content {
+  padding-left: 24px;
+  flex: 1;
+}
+
+.tab-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.icon-active {
+  color: var(--color-foreground);
+}
+
+.icon-muted {
+  color: var(--color-muted);
+}
+
+.tab-title {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.title-active {
+  color: var(--color-foreground);
+}
+
+.title-muted {
+  color: var(--color-muted);
+}
+
+.tab-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin-top: 12px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease forwards;
+}
+
+/* Right side Half Mockup */
+.showcase-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Alineado para que parezca que sale desde abajo */
+}
+
+/* El fondo redondeado que vemos en la ref */
+.showcase-visual-card {
+  width: 100%;
+  max-width: 500px;
+  height: 550px; /* Altura fija para hacer el recorte */
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 40px 80px -20px rgba(0, 123, 165, 0.1), 0 0 0 1px rgba(0,0,0,0.03);
+  position: relative;
+  overflow: hidden; /* CORTAMOS el mockup que se desborde */
+  display: flex;
+  justify-content: center;
+  padding-top: 60px; /* Separación desde el borde superior de la caja */
+}
+
+/* Degradado blanco en la parte inferior del recuadro */
+.showcase-visual-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,1) 100%);
+  pointer-events: none;
+  border-radius: 0 0 40px 40px;
+  z-index: 10;
+}
+
+.showcase-mockup-wrapper {
+  /* Desplazamos el mockup hacia abajo para que la mitad superior se vea perfectamente */
+  width: 340px;
+  transform-origin: top center;
+}
+
+/* Si PhoneMockup.css aplica "position: relative", sobrescribimos algunos detalles si hiciera falta. 
+   La clave es que cortamos el sobrante por abajo. */
+.showcase-phone {
+  pointer-events: none; /* Que no se crucen clicks si no los hay */
+}
+
+@media (max-width: 768px) {
+  .showcase-visual-card {
+    height: 450px;
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,45 @@
+.border-beam-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.border-beam-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--bb-size));
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    transparent 0deg,
+    transparent 200deg,
+    var(--bb-color-from) 280deg,
+    var(--bb-color-to) 360deg
+  );
+  animation: border-beam var(--bb-duration) linear infinite;
+  animation-delay: var(--bb-delay);
+  transform-origin: 50% 50%;
+}
+
+/* Create the inner mask so the beam only shows on the border */
+.border-beam-glow {
+  position: absolute;
+  inset: var(--bb-border-width);
+  background-color: var(--color-background); /* Hides the inner gradient, revealing only the border */
+  border-radius: inherit;
+  z-index: 1;
+}
+
+@keyframes border-beam {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

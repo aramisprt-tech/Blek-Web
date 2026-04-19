@@ -1,0 +1,160 @@
+.footer-root {
+  background-color: #f8fafc;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 40px 32px;
+}
+
+/* ── Top row ─────────────────────────────────────── */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+/* Brand */
+.footer-brand {
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 36px;
+  width: auto;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #64748b;
+  max-width: 280px;
+  margin-bottom: 28px;
+}
+
+.footer-accent {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Nav links */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #0f172a;
+}
+
+/* ── Right column ────────────────────────────────── */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.footer-get-app {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475569;
+  margin: 0;
+}
+
+.footer-store-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #0f172a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  min-width: 170px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.footer-store-btn:hover {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.footer-store-btn svg {
+  flex-shrink: 0;
+}
+
+.footer-store-btn span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.store-sub {
+  font-size: 0.68rem;
+  opacity: 0.8;
+}
+
+.store-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.footer-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 40px 0 28px;
+}
+
+/* ── Bottom row ──────────────────────────────────── */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social-link:hover {
+  color: #0f172a;
+}

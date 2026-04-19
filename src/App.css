@@ -1,0 +1,34 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section {
+  padding: 40px 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Hide default cursor everywhere */
+* {
+  cursor: none !important;
+}
+
+/* Restore native cursor on interactive text elements */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
