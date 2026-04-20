@@ -11,6 +11,7 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
+import { NotFound } from './pages/NotFound';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/terminos" element={<Terms />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
