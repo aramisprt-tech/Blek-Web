@@ -68,9 +68,10 @@
   background-color: #f8fafc;
 }
 
-.navbar-link:nth-child(2) {
-  background-color: #fafafa;
-  color: #111827;
+/* active state for NavLink */
+.navbar-link--active {
+  color: var(--color-brand, #007BA5) !important;
+  background-color: rgba(0, 123, 165, 0.07);
 }
 
 /* ── Desktop CTA ──────────────────────────────────── */

@@ -9,6 +9,8 @@ import { Showcase } from './components/sections/Showcase';
 import { VelocityBanner } from './components/sections/VelocityBanner';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { Blog } from './pages/Blog';
+import { BlogPost } from './pages/BlogPost';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
 
@@ -54,6 +56,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/privacidad" element={<Privacy />} />
           <Route path="/terminos" element={<Terms />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
 
         <Footer />

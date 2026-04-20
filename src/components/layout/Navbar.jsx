@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import textLogo from '../../../logos/text-logo.png';
 
@@ -14,8 +14,6 @@ export function Navbar() {
           <img src={textLogo} alt="Blek" className="navbar-text" />
         </Link>
 
-        {/* Desktop nav links - REMOVED per user request */}
-        
         {/* Desktop CTA */}
         <div className="navbar-actions navbar-actions--desktop">
           <button className="navbar-btn" onClick={() => document.getElementById('hero-email')?.focus()}>
@@ -38,7 +36,7 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <nav className="navbar-mobile-menu" onClick={() => setMenuOpen(false)}>
+        <nav className="navbar-mobile-menu">
           <button
             className="navbar-btn navbar-mobile-cta"
             onClick={() => { setMenuOpen(false); document.getElementById('hero-email')?.focus(); }}

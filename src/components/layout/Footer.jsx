@@ -23,6 +23,7 @@ export function Footer() {
               Lee más, comparte más, <span className="footer-accent">crece más</span>.
             </p>
             <nav className="footer-nav">
+              <Link to="/blog">Blog</Link>
               <Link to="/privacidad">Política de privacidad</Link>
               <Link to="/terminos">Términos de uso</Link>
             </nav>

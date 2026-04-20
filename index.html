@@ -3,16 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Primary SEO ──────────────────────────────────── -->
+    <title>Blek — Tu estantería de libros digital | App de lectura</title>
+    <meta name="description" content="Blek es la app para lectores que quieren cumplir sus objetivos. Registra tus libros, mantén tus rachas de lectura, únete a clubes y lleva el control de tu progreso. Disponible en iOS y Android." />
+    <meta name="keywords" content="app de lectura, hábitos lectores, seguimiento de libros, clubes de lectura, metas de lectura, estantería digital, blek app" />
+    <meta name="author" content="Blek" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://blekapp.com/" />
+
+    <!-- ── Favicon ───────────────────────────────────────── -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Blek - Tu estantería de libros en un solo lugar</title>
-    <meta name="description" content="La app definitiva para mantener tus hábitos de lectura, con timer, rachas amigables, clubes de lectura y más." />
-    <!-- Google Fonts -->
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- ── Theme color ───────────────────────────────────── -->
+    <meta name="theme-color" content="#007BA5" />
+
+    <!-- ── Open Graph (Facebook / WhatsApp / LinkedIn) ──── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blekapp.com/" />
+    <meta property="og:title" content="Blek — Tu estantería de libros digital" />
+    <meta property="og:description" content="La app definitiva para mantener tus hábitos de lectura. Timer, rachas amigables, clubes de lectura y más. ¡Empieza gratis!" />
+    <meta property="og:image" content="https://blekapp.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Blek" />
+
+    <!-- ── Twitter Card ───────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@blekapp" />
+    <meta name="twitter:title" content="Blek — Tu estantería de libros digital" />
+    <meta name="twitter:description" content="La app definitiva para mantener tus hábitos de lectura. Timer, rachas amigables, clubes de lectura y más." />
+    <meta name="twitter:image" content="https://blekapp.com/og-image.png" />
+
+    <!-- ── Google Fonts ───────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- reCAPTCHA v3 (invisible, loaded async) -->
+
+    <!-- ── JSON-LD Structured Data ───────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://blekapp.com/#organization",
+          "name": "Blek",
+          "url": "https://blekapp.com",
+          "logo": "https://blekapp.com/favicon.png",
+          "sameAs": [
+            "https://www.instagram.com/blek.app/",
+            "https://www.tiktok.com/@blek.app"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://blekapp.com/#website",
+          "url": "https://blekapp.com",
+          "name": "Blek",
+          "publisher": { "@id": "https://blekapp.com/#organization" },
+          "inLanguage": "es"
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "Blek",
+          "operatingSystem": "iOS, Android",
+          "applicationCategory": "LifestyleApplication",
+          "description": "App de seguimiento de lectura con timer, rachas, metas y clubes de lectura en comunidad.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "publisher": { "@id": "https://blekapp.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── reCAPTCHA v3 (invisible, loaded async) ─────── -->
     <script>
-      // Load reCAPTCHA only when site key is available (set via Vite env)
       (function() {
         var siteKey = '%VITE_RECAPTCHA_SITE_KEY%';
         if (siteKey && siteKey !== '%VITE_RECAPTCHA_SITE_KEY%' && siteKey !== 'REEMPLAZA_CON_TU_SITE_KEY') {
