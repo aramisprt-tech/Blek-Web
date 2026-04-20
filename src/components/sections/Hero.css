@@ -76,7 +76,7 @@
   border-radius: 999px;
   background: white;
   padding: 8px;
-  box-shadow: 0 20px 40px -10px rgba(0, 123, 165, 0.15), 0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px -10px rgba(0, 123, 165, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s;
 }
 
@@ -153,8 +153,9 @@
   transform: translate(-50%, -50%);
   width: 1300px;
   height: 1300px;
-  background: radial-gradient(circle, rgba(0,123,165,0.35) 0%, rgba(77,193,245,0.18) 35%, rgba(200,235,248,0.08) 60%, rgba(255,255,255,0) 72%);
-  z-index: 10; /* Changed z-index so it sits right behind the widgets */
+  background: radial-gradient(circle, rgba(0, 123, 165, 0.35) 0%, rgba(77, 193, 245, 0.18) 35%, rgba(200, 235, 248, 0.08) 60%, rgba(255, 255, 255, 0) 72%);
+  z-index: 10;
+  /* Changed z-index so it sits right behind the widgets */
   border-radius: 50%;
   pointer-events: none;
 }
@@ -168,7 +169,8 @@
 /* They need absolute positioning via the wrapper */
 .hero-mockup-area :global(.floating-widget-wrapper) {
   position: absolute;
-  z-index: 30; /* Front of glow */
+  z-index: 30;
+  /* Front of glow */
 }
 
 .fw-pos-1 {
@@ -192,15 +194,27 @@
 }
 
 @media (max-width: 1200px) {
-  .fw-pos-1 { left: 50px; }
-  .fw-pos-2 { right: 50px; }
-  .fw-pos-3 { left: 80px; }
-  .fw-pos-4 { right: 50px; }
+  .fw-pos-1 {
+    left: 50px;
+  }
+
+  .fw-pos-2 {
+    right: 50px;
+  }
+
+  .fw-pos-3 {
+    left: 80px;
+  }
+
+  .fw-pos-4 {
+    right: 50px;
+  }
 }
 
 /* ── Mobile-only widget grid ────────────────────── */
 .hero-mobile-widgets {
-  display: none; /* hidden on desktop */
+  display: none;
+  /* hidden on desktop */
 }
 
 /* ── Mobile responsive ──────────────────────────── */
@@ -257,7 +271,10 @@
   }
 
   /* Hide absolute-positioned widgets on mobile */
-  .fw-pos-1, .fw-pos-2, .fw-pos-3, .fw-pos-4 {
+  .fw-pos-1,
+  .fw-pos-2,
+  .fw-pos-3,
+  .fw-pos-4 {
     display: none;
   }
 
@@ -279,6 +296,7 @@
   .hero-mobile-widgets {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
     gap: 12px;
     width: 100%;
     margin-top: 20px;
@@ -293,7 +311,7 @@
   }
 
   /* Force FloatingWidget wrappers to fill the cell */
-  .hero-mw-item > div {
+  .hero-mw-item>div {
     width: 100% !important;
     transform: none !important;
   }
@@ -303,50 +321,113 @@
    Hero Staggered Load Animations (above-the-fold)
    =================================================== */
 @keyframes heroRevealUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes heroRevealFade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes heroRevealScale {
-  from { opacity: 0; transform: scale(0.9) translateY(24px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes heroRevealLeft {
-  from { opacity: 0; transform: translateX(-36px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes heroRevealRight {
-  from { opacity: 0; transform: translateX(36px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Text-area stagger */
-.hero-anim-title  { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.10s both; }
-.hero-anim-sub    { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.26s both; }
-.hero-anim-form   { animation: heroRevealUp   0.9s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
-.hero-anim-proof  { animation: heroRevealFade 0.9s cubic-bezier(0.16,1,0.3,1) 0.58s both; }
+.hero-anim-title {
+  animation: heroRevealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
+}
+
+.hero-anim-sub {
+  animation: heroRevealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+}
+
+.hero-anim-form {
+  animation: heroRevealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.hero-anim-proof {
+  animation: heroRevealFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both;
+}
 
 /* Phone mockup reveal */
-.hero-mockup-enter { animation: heroRevealScale 1.1s cubic-bezier(0.16,1,0.3,1) 0.35s both; }
+.hero-mockup-enter {
+  animation: heroRevealScale 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
 
 /* Floating widget entrances — animate the inner wrapper so rotation is preserved */
-.fw-pos-1 .floating-widget-animator { animation: heroRevealLeft  0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
-.fw-pos-2 .floating-widget-animator { animation: heroRevealRight 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
-.fw-pos-3 .floating-widget-animator { animation: heroRevealLeft  0.9s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
-.fw-pos-4 .floating-widget-animator { animation: heroRevealRight 0.9s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
+.fw-pos-1 .floating-widget-animator {
+  animation: heroRevealLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+
+.fw-pos-2 .floating-widget-animator {
+  animation: heroRevealRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+
+.fw-pos-3 .floating-widget-animator {
+  animation: heroRevealLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+.fw-pos-4 .floating-widget-animator {
+  animation: heroRevealRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-anim-title, .hero-anim-sub, .hero-anim-form, .hero-anim-proof,
+
+  .hero-anim-title,
+  .hero-anim-sub,
+  .hero-anim-form,
+  .hero-anim-proof,
   .hero-mockup-enter,
-  .fw-pos-1 .floating-widget-animator, .fw-pos-2 .floating-widget-animator,
-  .fw-pos-3 .floating-widget-animator, .fw-pos-4 .floating-widget-animator {
+  .fw-pos-1 .floating-widget-animator,
+  .fw-pos-2 .floating-widget-animator,
+  .fw-pos-3 .floating-widget-animator,
+  .fw-pos-4 .floating-widget-animator {
     animation: none;
     opacity: 1;
     transform: none;
@@ -361,7 +442,7 @@
   text-align: center;
   padding: 8px 16px;
   border-radius: 8px;
-  animation: heroRevealUp 0.4s cubic-bezier(0.16,1,0.3,1) both;
+  animation: heroRevealUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-form-msg--success {
