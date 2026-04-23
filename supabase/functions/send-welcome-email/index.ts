@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")
@@ -19,7 +20,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Soporte Blek <soporte@blekapp.com>",
+        from: "Blek <soporte@blekapp.com>",
         to: [userEmail],
         subject: "¡Bienvenido a la Waitlist de Blek!",
         html: `<!DOCTYPE html>
@@ -27,6 +28,13 @@ serve(async (req) => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="supported-color-schemes" content="dark">
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+  </style>
 </head>
 <body style="background-color:#121212; margin:0; padding:0; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
   <div style="background-color:#1a1a1a; max-width:640px; margin:0 auto; padding:40px 24px;">
