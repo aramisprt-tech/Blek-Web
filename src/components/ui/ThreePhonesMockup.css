@@ -1,0 +1,150 @@
+.three-phones-container {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 950px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 80px;
+  perspective: 1000px;
+}
+
+.phone-wrapper {
+  position: absolute;
+  top: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Use drop-shadow on the image itself if it's a transparent PNG of a phone */
+  opacity: 1 !important; 
+}
+
+.phone-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.4));
+}
+
+/* Center Phone */
+.phone-center {
+  width: 850px;
+  z-index: 30;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Left Phone */
+.phone-left {
+  width: 720px;
+  z-index: 20;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-90%);
+}
+
+/* Right Phone */
+.phone-right {
+  width: 720px;
+  z-index: 20;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-10%);
+}
+
+@media (max-width: 1600px) {
+  .three-phones-container {
+    height: 750px;
+  }
+  .phone-center {
+    width: 650px;
+  }
+  .phone-left {
+    width: 550px;
+    top: 120px;
+    transform: translateX(-90%);
+  }
+  .phone-right {
+    width: 550px;
+    top: 120px;
+    transform: translateX(-10%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .three-phones-container {
+    height: 550px;
+  }
+  .phone-center {
+    width: 500px;
+  }
+  .phone-left {
+    width: 420px;
+    top: 90px;
+    transform: translateX(-90%);
+  }
+  .phone-right {
+    width: 420px;
+    top: 90px;
+    transform: translateX(-10%);
+  }
+}
+
+@media (max-width: 900px) {
+  .three-phones-container {
+    height: 400px;
+  }
+  .phone-center {
+    width: 350px;
+  }
+  .phone-left {
+    width: 300px;
+    top: 60px;
+    transform: translateX(-90%);
+  }
+  .phone-right {
+    width: 300px;
+    top: 60px;
+    transform: translateX(-10%);
+  }
+}
+
+@media (max-width: 600px) {
+  .three-phones-container {
+    height: 320px;
+    margin-top: 40px;
+  }
+  .phone-center {
+    width: 260px;
+  }
+  .phone-left {
+    width: 220px;
+    top: 40px;
+    transform: translateX(-88%);
+  }
+  .phone-right {
+    width: 220px;
+    top: 40px;
+    transform: translateX(-12%);
+  }
+}
+
+@media (max-width: 480px) {
+  .three-phones-container {
+    height: 280px;
+  }
+  .phone-center {
+    width: 220px;
+  }
+  .phone-left {
+    width: 190px;
+    top: 30px;
+    transform: translateX(-85%);
+  }
+  .phone-right {
+    width: 190px;
+    top: 30px;
+    transform: translateX(-15%);
+  }
+}

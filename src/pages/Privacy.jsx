@@ -12,26 +12,25 @@ export function Privacy() {
       <div className="privacy-container">
         <header className="privacy-header">
           <h1 className="privacy-title">Política de Privacidad</h1>
-          <p className="privacy-updated">Última actualización: Abril 2026</p>
+          <p className="privacy-updated">Última actualización: julio 2026</p>
         </header>
 
         <section className="privacy-content">
           <div className="privacy-section">
             <h2>1. Introducción</h2>
             <p>
-              En Blek nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica qué información recopilamos, cómo la utilizamos y cuáles son tus derechos sobre ella. Al usar la aplicación, aceptas las prácticas descritas en este documento.
+              En Blek nos comprometemos a proteger tu privacidad. Esta Política de Privacidad explica qué información recopilamos, cómo la utilizamos y cuáles son tus derechos. Al descargar y utilizar Blek, aceptas las prácticas descritas en este documento.
             </p>
           </div>
 
           <div className="privacy-section">
             <h2>2. Información que recopilamos</h2>
-            <p>Recopilamos la siguiente información para ofrecerte el servicio:</p>
+            <p>Para ofrecerte la mejor experiencia posible, recopilamos la siguiente información:</p>
             <ul>
-              <li><strong>Datos de cuenta:</strong> Dirección de correo electrónico y nombre de usuario que proporcionas al registrarte.</li>
-              <li><strong>Actividad de lectura:</strong> Libros que añades a tu biblioteca, tu historial de lectura y valoraciones.</li>
-              <li><strong>Metas y progreso:</strong> Metas de lectura y progreso registrado dentro de la app.</li>
-              <li><strong>Preferencias:</strong> Preferencias de notificación y ajustes de la aplicación.</li>
-              <li><strong>Datos técnicos:</strong> Información de conexión técnica básica (tipo de dispositivo, versión del sistema operativo) para garantizar el correcto funcionamiento de la app.</li>
+              <li><strong>Datos de cuenta:</strong> Dirección de correo electrónico, nombre de usuario y contraseña proporcionados al registrarte.</li>
+              <li><strong>Actividad y uso:</strong> Los libros que añades a tu estantería digital, tu historial de lectura, valoraciones, rachas de lectura, sesiones con el timer, progreso de tus metas y tu actividad en los clubes de lectura.</li>
+              <li><strong>Datos técnicos:</strong> Información básica del dispositivo (modelo, versión del sistema operativo, zona horaria) e información sobre bloqueos o errores de la app para ayudarnos a mejorar su estabilidad.</li>
+              <li><strong>Preferencias:</strong> Tus ajustes de notificaciones y personalización de la aplicación.</li>
             </ul>
           </div>
 
@@ -39,66 +38,57 @@ export function Privacy() {
             <h2>3. Cómo usamos tu información</h2>
             <p>Utilizamos tus datos exclusivamente para:</p>
             <ul>
-              <li>Crear y gestionar tu cuenta personal en Blek.</li>
-              <li>Sincronizar tu biblioteca y progreso de lectura entre dispositivos.</li>
-              <li>Enviarte notificaciones relacionadas con tus metas y actividad, si lo has autorizado.</li>
-              <li>Mejorar la experiencia de la aplicación y corregir errores técnicos.</li>
-              <li>Responder a tus solicitudes de soporte o consultas.</li>
+              <li>Crear, personalizar y gestionar tu cuenta en Blek.</li>
+              <li>Sincronizar tu biblioteca, rachas y progreso de lectura entre tus dispositivos.</li>
+              <li>Permitir tu participación en clubes de lectura y funciones sociales.</li>
+              <li>Enviarte recordatorios, notificaciones de tus metas y actualizaciones (siempre que lo hayas autorizado).</li>
+              <li>Analizar el rendimiento de la aplicación, solucionar errores técnicos y mejorar nuestras funciones.</li>
             </ul>
           </div>
 
           <div className="privacy-section">
-            <h2>4. Compartir información con terceros</h2>
+            <h2>4. Proveedores externos y servicios de terceros</h2>
             <p>
-              No vendemos, alquilamos ni compartimos tu información personal con terceros con fines comerciales. Únicamente podemos compartir datos en los siguientes casos limitados:
+              Blek utiliza servicios de terceros para funcionar correctamente (como bases de datos en la nube y APIs de metadatos de libros para mostrar portadas y sinopsis). Compartimos la información estrictamente necesaria con estos proveedores bajo acuerdos de confidencialidad, únicamente para mantener la infraestructura técnica de la aplicación. No vendemos tus datos a terceros con fines publicitarios o comerciales.
             </p>
-            <ul>
-              <li>Con proveedores de servicios técnicos que nos ayudan a operar la infraestructura de la app, bajo estrictos acuerdos de confidencialidad.</li>
-              <li>Cuando sea requerido por ley o autoridad competente.</li>
-              <li>Para proteger los derechos, la seguridad o la propiedad de Blek o de sus usuarios.</li>
-            </ul>
           </div>
 
           <div className="privacy-section">
             <h2>5. Almacenamiento y seguridad</h2>
             <p>
-              Tu información se almacena en servidores seguros con cifrado en tránsito y en reposo. Aplicamos medidas técnicas y organizativas adecuadas para proteger tus datos contra accesos no autorizados, pérdida o alteración.
-            </p>
-            <p>
-              Conservamos tus datos mientras tu cuenta esté activa. Si eliminas tu cuenta, tus datos personales serán borrados de forma permanente en un plazo máximo de 30 días.
+              Aplicamos medidas de seguridad técnicas y organizativas para proteger tus datos contra accesos no autorizados, alteraciones o pérdida. Sin embargo, ningún sistema es completamente infalible. Al utilizar Blek, asumes que la transmisión de datos a través de Internet tiene riesgos inherentes.
             </p>
           </div>
 
           <div className="privacy-section">
-            <h2>6. Tus derechos</h2>
-            <p>Tienes derecho a:</p>
+            <h2>6. Menores de edad</h2>
+            <p>
+              Blek tiene una clasificación de edad de 3+/4+ en las tiendas de aplicaciones, lo que significa que su contenido es seguro y apto para todos los públicos. Sin embargo, para crear una cuenta y procesar datos personales, el usuario debe tener la edad mínima requerida por la legislación de protección de datos de su país (por ejemplo, 13 años en EE.UU. o 14 años en España). Si el usuario es menor de esa edad, la cuenta debe ser creada o autorizada por un padre o tutor legal. Si descubrimos que hemos recopilado datos de un menor sin el consentimiento verificable de sus tutores, procederemos a eliminarlos.
+            </p>
+          </div>
+
+          <div className="privacy-section">
+            <h2>7. Tus derechos y retención de datos</h2>
+            <p>Conservamos tus datos mientras tu cuenta esté activa. En cualquier momento tienes derecho a:</p>
             <ul>
               <li>Acceder a los datos personales que tenemos sobre ti.</li>
-              <li>Solicitar la corrección de datos inexactos.</li>
-              <li>Solicitar la eliminación completa de tu cuenta y todos tus datos.</li>
-              <li>Retirar tu consentimiento para el envío de notificaciones en cualquier momento desde los ajustes de la app.</li>
-              <li>Presentar una reclamación ante la autoridad de protección de datos competente.</li>
+              <li>Corregir información inexacta.</li>
+              <li>Solicitar la eliminación completa y definitiva de tu cuenta y todos sus datos desde los ajustes de la aplicación.</li>
+              <li>Retirar tu consentimiento para recibir notificaciones.</li>
             </ul>
-          </div>
-
-          <div className="privacy-section">
-            <h2>7. Menores de edad</h2>
-            <p>
-              Blek no está destinado a menores de 13 años. No recopilamos conscientemente información de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado datos personales, contáctanos para que podamos eliminarlos.
-            </p>
           </div>
 
           <div className="privacy-section">
             <h2>8. Cambios en esta política</h2>
             <p>
-              Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos cualquier cambio relevante a través de la aplicación. El uso continuado de Blek tras la publicación de cambios implica tu aceptación de la nueva versión.
+              Nos reservamos el derecho a actualizar esta Política de Privacidad en cualquier momento. Te notificaremos sobre cambios significativos a través de la app o por correo electrónico. El uso continuado de Blek tras dichos cambios implica tu aceptación.
             </p>
           </div>
 
           <div className="privacy-section">
             <h2>9. Contacto</h2>
             <p>
-              Si tienes preguntas sobre esta política o quieres ejercer tus derechos, escríbenos a: <a href="mailto:soporte@blekapp.com">soporte@blekapp.com</a>
+              Si tienes dudas sobre esta política o el tratamiento de tus datos, puedes escribirnos a: <a href="mailto:soporte@blekapp.com">soporte@blekapp.com</a>
             </p>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DotPattern } from './components/ui/DotPattern';
 import { SmoothCursor } from './components/ui/SmoothCursor';
@@ -7,6 +7,7 @@ import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
 import { Showcase } from './components/sections/Showcase';
 import { VelocityBanner } from './components/sections/VelocityBanner';
+import { NewsletterCTA } from './components/sections/NewsletterCTA';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Blog } from './pages/Blog';
@@ -19,11 +20,67 @@ function Home() {
   const footerRef = useRef(null);
   useScrollReveal(footerRef);
 
+  useEffect(() => {
+    const setMetaTag = ({ name, property, content }) => {
+      const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`;
+      let tag = document.head.querySelector(selector);
+
+      if (!tag) {
+        tag = document.createElement('meta');
+        if (name) tag.setAttribute('name', name);
+        if (property) tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+
+      tag.setAttribute('content', content);
+    };
+
+    document.title = 'Blek | App de libros para registrar lecturas y cumplir metas';
+
+    setMetaTag({
+      name: 'description',
+      content: 'Blek es la app de libros en español para registrar lecturas, mantener rachas diarias, cumplir metas anuales y unirte a clubes de lectura.',
+    });
+    setMetaTag({
+      name: 'keywords',
+      content: 'blek, app de libros, app de lectura, registrar libros leídos, seguimiento de lectura, meta de lectura, clubes de lectura',
+    });
+    setMetaTag({ name: 'robots', content: 'index, follow' });
+
+    setMetaTag({
+      property: 'og:title',
+      content: 'Blek | App de libros para registrar lecturas y cumplir metas',
+    });
+    setMetaTag({
+      property: 'og:description',
+      content: 'Registra libros leídos, mantén rachas diarias, cumple tus metas anuales y comparte en clubes de lectura con Blek.',
+    });
+    setMetaTag({ property: 'og:url', content: 'https://blekapp.com/' });
+
+    setMetaTag({
+      name: 'twitter:title',
+      content: 'Blek | App de libros para registrar lecturas y cumplir metas',
+    });
+    setMetaTag({
+      name: 'twitter:description',
+      content: 'Blek te ayuda a registrar lecturas, crear hábito con rachas y alcanzar tu objetivo anual de libros.',
+    });
+
+    let canonicalTag = document.head.querySelector('link[rel="canonical"]');
+    if (!canonicalTag) {
+      canonicalTag = document.createElement('link');
+      canonicalTag.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute('href', 'https://blekapp.com/');
+  }, []);
+
   return (
     <main>
       <Hero />
       <VelocityBanner />
       <Showcase />
+      <NewsletterCTA />
     </main>
   );
 }

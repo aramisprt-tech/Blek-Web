@@ -44,9 +44,9 @@ export function Showcase() {
         {/* Section Header */}
         <div className="showcase-header">
           <span data-reveal className="badge reveal-up reveal-delay-1">Explora Blek</span>
-          <h2 data-reveal className="showcase-title reveal-up reveal-delay-2">La red social de los libros</h2>
+          <h2 data-reveal className="showcase-title reveal-up reveal-delay-2">Blek: app de libros y comunidad de lectura</h2>
           <p data-reveal className="showcase-subtitle reveal-up reveal-delay-3">
-            Todo lo que necesitas para que tu hábito de lectura sea constante, divertido y social.
+            Todo lo que necesitas para registrar tus lecturas, mantener una meta anual y convertir tu hábito de lectura en una rutina constante.
           </p>
         </div>
 
@@ -94,6 +94,16 @@ export function Showcase() {
             </div>
           </div>
 
+        </div>
+
+        <div className="showcase-seo-copy">
+          <h2 className="showcase-seo-title">Blek, la app de libros para registrar lecturas y cumplir metas</h2>
+          <p>
+            Blek es una app de lectura en español diseñada para organizar tu biblioteca digital, seguir tu progreso diario y ayudarte a leer más cada semana.
+          </p>
+          <p>
+            Si buscas una app para registrar libros leídos, crear hábito de lectura y participar en clubes con otros lectores, Blek reúne seguimiento, estadísticas y comunidad en un solo lugar.
+          </p>
         </div>
       </div>
     </section>

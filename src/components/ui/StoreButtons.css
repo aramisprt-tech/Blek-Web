@@ -1,0 +1,76 @@
+.store-buttons-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.official-store-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.official-store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s;
+  cursor: pointer;
+  border-radius: 8px; /* Slightly rounds corners just in case */
+}
+
+.official-store-link:not(.disabled-store):hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.official-store-badge {
+  height: 64px; /* Much larger */
+  width: auto;
+  display: block;
+}
+
+.play-store-badge {
+  /* The Google Play SVG from Wikimedia sometimes has slightly more padding. 
+     Adjusting scale to visually match the App Store badge perfectly. */
+  transform: scale(1.05);
+}
+
+.disabled-store {
+  cursor: not-allowed;
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
+
+.soon-badge {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  background-color: #007BA5; /* Brand Blue */
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(0, 123, 165, 0.4);
+  z-index: 10;
+  border: 2px solid white;
+}
+
+@media (max-width: 600px) {
+  .store-buttons-container {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .official-store-badge {
+    height: 52px; /* Slightly larger on mobile for tappability */
+  }
+  .soon-badge {
+    right: -20px;
+  }
+}
